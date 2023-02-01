@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //프롬프트는 숫자를 받을 수는 없는데 
+        // -자체가 문자끼리 뺄 수 없으니까 숫자로 바꿔주는 것 뿐이다.
+        height = prompt("heiht를 입력하시오")
+        weight = prompt("weight를 입력하시오")
+        // 숫자로 바꾸어 줍시다. -> 부품(객체가)이 필요합니다.
+        result = parseInt(height) + parseInt(weight)
+        result2 =  parseFloat(height) / parseFloat(weight)
+        alert('키에서 몸무게를 뺸 값은'+result + '입니다.')
+        alert('키를 몸무게로 나눈 값은'+result2 + '입니다.')
+
+        
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

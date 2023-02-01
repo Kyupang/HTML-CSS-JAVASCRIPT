@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: blue;
+        }
+        #total{
+            width: 800px;
+            height: 800px;
+            background-color: cyan;
+        }
+        #top {
+            width: 800px;
+            height: 100px;
+            background-color: lime;
+            padding: 2px;
+        }
+        #top2 {
+            background-color: white;
+            color: lightgreen;
+            width: 150px;
+            height: 100px;
+            position: fixed;
+            top: 10px;
+            right: 5px;
+            border: 10px double greenyellow;
+            box-shadow: 5px 5px green;
+
+
+        }
+        #center {
+            
+            background: ivory;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
+        li:nth-child(2n) {
+            background-color: orange;
+        }
+        li:nth-child(2n+1) {
+            background-color: yellow;
+        }
+        a:hover {
+            text-decoration: underline;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<!-- 순서는 바디에 화면을 나눈다. -->
+<!-- 넣고싶은 내용을 넣고 스타일을 설정한다. -->
+
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="page10.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="page20.html">제품정보</a>
+                </li>
+                <li>
+                    <a href="page30.html">게시판</a>
+                </li>
+                <li>
+                    <a href="page40.html">회사정보</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="top2">
+            고정된 화면 보이는 부분 장바구니 
+        </div>
+
+        <div id="center">
+            <img src="4.jpg" alt="" width="400" height="600">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
+        li:first-child {
+            border-radius: 10px;
+        }
+        li:last-child {
+            border-radius: 0 50px 0 50px;
+        }
+
+        li:nth-child(2n) {
+            background-color: orange;
+        }
+        li:nth-child(2n+1) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 순서없는 목록을 만드는 태그 -->
+    <ul>
+        <li>
+            <a href="page1.html">회원가입</a>
+        </li>
+        <li>
+            <a href="cafe.html">카페</a>
+        </li>
+        <li>
+            <a href="mail.html">메일</a>
+        </li>
+        <li>
+            <a href="news.html">뉴스</a>
+        </li>
+        
+    </ul>
+</body>
+</html>

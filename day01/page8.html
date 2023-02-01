@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 게시판 소스 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr align="center" bgcolor="##dd10e8">
+            <!-- 테이블의 헤더이다. -->
+            <th width="100">항목</th>
+            <th width="300">입력</th>
+        </tr>
+        <tr align="center">
+            <td bgcolor="white">번호</td>
+            <td bgcolor="pink"></td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="white">제목</td>
+            <td bgcolor="yellow">
+                <input type="text">
+            </td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="white">내용</td>
+            <td bgcolor="yellow">
+                <textarea style="background-color: pink;" cols="30" rows="10"></textarea>
+            </td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="white">작성자</td>
+            <td bgcolor="yellow">
+                <input type="text">
+            </td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="yellow" colspan="2">
+                <!-- 인풋을 해도 되고 버튼으로 만들어도 된다. -->
+                <input type="submit" value="글쓰기 완료">
+                <button>글쓰기 완료</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

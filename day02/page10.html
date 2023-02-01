@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        div {
+            font-size: 15px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        #total {
+            width: 800px;
+            height: 800px;
+            background-color: cyan;
+        }
+
+        #top {
+            width: 800px;
+            height: 100px;
+            background-color: lime;
+            padding: 2px;
+        }
+
+        #top2 {
+            background-color: white;
+            color: lightgreen;
+            width: 150px;
+            height: 100px;
+            position: fixed;
+            top: 10px;
+            right: 5px;
+            border: 10px double greenyellow;
+            box-shadow: 5px 5px green;
+
+
+        }
+
+        #center {
+            padding: 30px;
+            width: 800px;
+            height: 800px;
+            background-color: beige;
+            vertical-align: middle;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 70px;
+            height: 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        li:nth-child(2n) {
+            background-color: orange;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: yellow;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<!-- 순서는 바디에 화면을 나눈다. -->
+<!-- 넣고싶은 내용을 넣고 스타일을 설정한다. -->
+
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="page5.html">홈으로</a>
+                </li>
+                <li>
+                    <a href="page20.html">제품정보</a>
+                </li>
+                <li>
+                    <a href="page30.html">게시판</a>
+                </li>
+                <li>
+                    <a href="page40.html">회사정보</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="top2">
+            고정된 화면 보이는 부분 장바구니
+        </div>
+
+        <div id="center">
+            <!-- 폼을 만들면 폼안에 있는 데이터만 버튼을 통해 보내진다 -->
+            <h3>검색 단어 입력</h3>
+            <form action="http://search.naver.com/search.naver">
+                검색어: <input type="text">
+                <button>검색어 전송</button>
+            </form>
+            <hr color="red">
+            <form action="보내는서버주소">
+                <table>
+                    <tr>
+                        <td>아이디:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>패스워드:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><button>로그인 처리 요청</button></td>
+                    </tr>
+                </table>
+            </form>
+            <hr color="red">
+            <form action="보내는서버주소">
+                <table>
+                    <tr>
+                        <td>아이디:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>패스워드:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>이름:</td>
+                        <td><input type="text" placeholder="성과 이름을 순서대로 붙여쓰세요."></td>
+                    </tr>
+                    <tr>
+                        <td>성별:</td>
+                        <td>남<input type="radio" name="gender" id="">여<input type="radio" name="gender" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>성별:</td>
+                        <td>
+                            달리기<input type="checkbox" name="hobby" id="">
+                            영화보기<input type="checkbox" name="hobby" id="">
+                            등산<input type="checkbox" name="hobby" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td>
+                            <select>
+                                <option>SKT</option>
+                                <option>SKT</option>
+                                <option>KT</option>
+                                <option>알뜰폰</option>
+                            </select>
+                            <input type="number" name="" id="" placeholder="-없이 숫자만 이어서">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>생년월일:</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>가입한 날짜:</td>
+                        <td><input type="week"></td>
+                    </tr>
+                    <tr>
+                        <td>하고싶은말:</td>
+                        <td><textarea name="" id="" cols="30" rows="10" placeholder="100글자 이내로 써주세요."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><button>회원가입 처리 요청</button></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
