@@ -13,15 +13,15 @@
         method = document.getElementById('method').value;
 
         switch (method){
-            case 1:
+            case '1':
                 break;
-            case 2:
+            case '2':
                 price+=1000;
                 break;
-            case 3: 
+            case '3': 
                 price +=500;
                 break;
-        }return price;
+        }
         result = document.getElementById("result")
         result.innerHTML = store+'에서'+price +'원을 결제수단'+method+'번으로 결제하셨습니다.'
     }
