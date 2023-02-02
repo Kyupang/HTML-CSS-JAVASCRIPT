@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function length_check(){
+            word_length = 4
+            id =document.getElementById('id2').value
+            id_length = id.length
+
+            if(word_length === id_length){
+                alert("ok")
+            }else{
+                alert("이건 안됨뇨!")
+            }
+        }
+
+        function check(){
+            //비밀번호 두개가 동일한지 보기위해서
+            //input에 입력된 value를 가져옵니다.
+            // div result 부분에 결과 내용을 추가하려면 
+            //result도 id로 가져와서 innerHTML 로 입력해주면 됩니다.
+            pw1 = document.getElementById('pw1').value;
+            pw2 = document.getElementById('pw2').value;
+            
+
+            result = document.getElementById("result")
+            if(pw1 ===pw2){
+                //result안에 오른쪽에 있는 내용을 html코드로 안쪽에 집어넣어여
+                result.innerHTML = "<font color =red>비밀번호 동일!!!</font> <img src ='성공.png' width =100 height=100>";
+            }else{
+                result.innerHTML = "<font color =blue>비밀번호 다름!!!</font> <img src ='실패.png' width =100 height=100>";
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디 : <input type="text" name="" id="id2" value="root"> <button onclick="length_check()">글자수 체크</button> <br>
+    패스워드 : <input type="password" name="" id="pw1" value="1234"> <br>
+    패스워드2 : <input type="password" name="" id="pw2" value="1234">  <button onclick="check()">패스워드 동일</button> <br>
+
+    <div id="result">
+        결과 들어갈 곳:
+    </div>
+</body>
+</html>

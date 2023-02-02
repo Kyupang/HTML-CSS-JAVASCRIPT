@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            //기존에 알고있는 아이디와 비밀번호가 
+            //입력된 값과 같은지를 확인하는 프로그램입니다. 
+            id = "root"
+            pw = "1234"
+            alert(id.length)
+            id2 = document.getElementById('id2').value;
+            pw2 = document.getElementById('pw2').value;
+            
+
+            result = document.getElementById("result")
+            if(id ===id2 && pw ===pw2){
+                //result안에 오른쪽에 있는 내용을 html코드로 안쪽에 집어넣어여
+                result.innerHTML = "<font color =red>로그인 성공!!!</font> <img src ='성공.png' width =100 height=100>";
+            }else{
+                result.innerHTML = "<font color =blue>로그인 실패!!!</font> <img src ='실패.png' width =100 height=100>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <hr color="red">
+    아이디 : <input type="text" name="" id="id2" value="root"> <br>
+    패스워드 : <input type="password" name="" id="pw2" value="1234"> <br>
+    
+    <button onclick="check()">로그인 처리</button>
+
+    <div id="result">
+        결과 들어갈 곳:
+    </div>
+</body>
+</html>

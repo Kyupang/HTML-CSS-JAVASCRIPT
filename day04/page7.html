@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function user(){
+            alert('ok')
+            user = document.getElementById('user').value
+            if(user ==='root'){
+                result1.innerHTML = '<font color = red>아이디 성공</font>'
+            }else{
+                reult1.innerHTML = '<font color = red>아이디 실패/ 재로그인 해주세요.</font>'
+            }
+        }
+        function naver(){
+            //네이버 검색으로 바로 연결해주는 프로그램입니다.
+            search = document.getElementById('naver').value
+            location.href ='https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=' + search
+        }
+    </script>
+</head>
+<body>
+    아이디 <input type="text" id="user" onblur="user()">
+    <div id="result1"></div>
+    <hr>
+    지식인 검색어 <input type="text"  id="naver" onblur="naver()">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function button(){
+        store = document.getElementById('store').value;
+        price = parseInt(document.getElementById('price').value);
+        method = document.getElementById('method').value;
+
+        switch (method){
+            case 1:
+                break;
+            case 2:
+                price+=1000;
+                break;
+            case 3: 
+                price +=500;
+                break;
+        }return price;
+        result = document.getElementById("result")
+        result.innerHTML = store+'에서'+price +'원을 결제수단'+method+'번으로 결제하셨습니다.'
+    }
+</script>
+
+<body>
+    <hr color="red">
+    구매상점: <input type="text" id="store" value="더조은샵"> <br>
+    결제금액: <input type="text" id="price" value="10000"> <br>
+    입력수단(1)계좌이체,2)신용카드,3)휴대폰결제) <br>
+    <input type="text" id="method"> <br>
+    <button onclick="button()">결제 버튼</button>
+    <hr color="blue">
+    <div id="result">
+        결제 결과는요?
+    </div>
+</body>
+</html>
