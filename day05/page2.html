@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta 보조적인 정보 뷰포트: 화면옵션 화면 크기에 맞춘다.-->
+    <!-- 반응형 웹사이트를 만들 수 있다. 참 좋은기능  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tour() {
+            let space = document.getElementById('space').value;
+            let month = document.getElementById('month').value;
+            let method = document.getElementById('method').value;
+            let vehicle ="";
+            let price = 0;
+            switch (method){
+                case '1':
+                    vehicle = '비행기';
+                    price = 30000;
+                    break;
+                case '2':
+                    vehicle = '버스';
+                    price = 10000;
+                    break;
+                case '3':
+                    vehicle = '자가용';
+                    price = 50000;
+                    break;
+            }
+            let result = document.getElementById('result');
+            result.innerHTML = '나는 ' + month + '월에 ' + space + '으로 ' + vehicle + '을(를) 타고 여행을 갈거에요, 비용은 <font color =blue>' + price + '</font>원 입니다.';
+        }
+    </script>
+</head>
+
+<body>
+    <hr color="red">
+    여행가고 싶은 곳: <input type="text" id="space" value="부산"> <br>
+    몇월에 갈까요: <input type="text" id="month" value="1"> <br>
+    무얼 타고 갈까요(1)비행기,2)버스,3)자가용) <br>
+    <input type="text" id="method"> <br>
+    <button onclick="tour()">여행 계획 버튼</button> <br>
+    <div id="result">결과 들어갈 곳</div>
+    <!-- 나는 1월에 부산으로 비행기를 타고 여행을 갈거에요, 비용은 30000원 -->
+</body>
+
+</html>

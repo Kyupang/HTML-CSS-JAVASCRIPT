@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            //기존에 알고있는 아이디와 비밀번호가 
+            //입력된 값과 같은지를 확인하는 프로그램입니다. 
+            id = "writer"
+            pw = "12341234"
+            //id를 통해서 value값을 가져오거나 그 내용을 가져올 수 있다.
+            id2 = document.getElementById('id2').value;
+            pw2 = document.getElementById('pw2').value;
+
+
+            result = document.getElementById("result")
+            if (id === id2 && pw === pw2) {
+                //result안에 오른쪽에 있는 내용을 html코드로 안쪽에 집어넣어여
+                result.innerHTML = "<font color =red>로그인 하셨습니다</font> <br> <button onclick=nextpage()>다음 창으로 넘어가기</button> <br> <img src ='성공.png' width =200 height=200> <br>";
+            } else {
+                result.innerHTML = "<font color =blue>로그인 실패!!!</font> <br> <img src ='실패.png' width =2000 height=200>";
+            }
+        }
+        function nextpage() {
+            location.href = "write.html";
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        div {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(190, 43, 43);
+        }
+
+        #login {
+            width: 800px;
+            height: 100px;
+            background-color: rgb(47, 186, 240);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="login" align ="center">
+        <table>
+            <tr>
+                <td>아이디 : </td>
+                <td><input type="text" name="" id="id2" value="writer"></td>
+            </tr>
+            <tr>
+                <td>패스워드 : </td>
+                <td><input type="password" name="" id="pw2" value="12341234"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button onclick="check()">로그인</button></td>
+            </tr>
+        </table>
+        <!-- onclick으로 버튼을 눌렀을 떄 함수를 실행하도록 한다.  -->
+    </div>
+    <div id="result">
+        <br> <br>
+        로그인 결과는요~?
+    </div>
+
+</body>
+
+</html>

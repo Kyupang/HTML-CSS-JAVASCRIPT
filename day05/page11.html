@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ajax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                                            <!-- slim, min 버전은 다 다르고 slim에서는 ajax가 안됨 -->
+    <script>
+        //ajax 하는 방법입니다~ 사이트로 연결 가능하며 
+        //스타일도 정해줄 수 있습니다. 
+      $(function () {
+        //b1을 클릭했을 때 오른쪽에 잇는 함수 내용을 실행해주세요!
+        $('#b1').click(function () {
+            //alert('b1클릭함.')
+            $.ajax({
+                url:"weather.html",
+                //익명함수 ajax 
+                success : function (x) {
+                    $('#d1').html(x)
+                }
+            })
+        }) //b1
+
+        $('#b2').click(function () {
+            //alert('b2클릭함.')
+            $.ajax({
+                url:"tour.html",
+                //익명함수 ajax 
+                success : function (x) {
+                    $('#d2').html(x)
+                }
+            })
+        }) //b2
+
+        $('#b3').click(function () {$.ajax({url:"ok.html",success : function (x) {$('#d3').html(x)}})}) 
+
+
+      }); //$
+    </script>
+  </head>
+  <body>
+    <button id="b1">기상청 정보 받아오기</button>
+    <button id="b2">여행 정보 받아오기</button>
+    <button id="b3">Ajax Test</button>
+    <hr>
+    <div id="d1" style="width: 500px; height: 100px; background : lime;"></div> <br>
+    <div id="d2" style="width: 500px; height: 100px; background : yellow;"></div> <br>
+    <div id="d3" style="width: 500px; height: 100px; background : pink;"></div> <br>
+  </body>
+</html>

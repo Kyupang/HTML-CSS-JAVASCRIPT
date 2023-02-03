@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta 보조적인 정보 뷰포트: 화면옵션 화면 크기에 맞춘다.-->
+    <!-- 반응형 웹사이트를 만들 수 있다. 참 좋은기능  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function button(){
+            let store = document.getElementById('store').value;
+            let price = parseInt(document.getElementById('price').value);
+            let method = document.getElementById("method").value;
+
+            switch(method){
+                case '1':
+                    break;
+                case '2':
+                    price +=1000;
+                    break;
+                case '3':
+                    price +=500;
+                    break;
+            }
+
+            let result = document.getElementById('result');                                       //여기에 이미지 ,동영상 다 가능 
+            result.innerHTML = store+'에서'+price +'원을 결제수단'+method+'번으로 결제하셨습니다, 결제 금액은 <font color=red>'+price+'</font>'
+
+
+        }
+    </script>
+</head>
+<body>
+    <hr color="red">
+    구매상점: <input type="text" id="store" value="더조은샵"> <br>
+    결제금액: <input type="text" id="price" value="10000"> <br>
+    입력수단(1)계좌이체,2)신용카드,3)휴대폰결제) <br>
+    <input type="text" id="method"> <br>
+    <button onclick="button()">결제버튼</button> <br>
+    <div id="result">결과 들어갈 곳</div>
+</body>
+</html>
